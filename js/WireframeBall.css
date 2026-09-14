@@ -1,0 +1,18 @@
+.wireframe-ball {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wireframe-ball canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wireframe-ball {
+    opacity: 0.6;
+  }
+}

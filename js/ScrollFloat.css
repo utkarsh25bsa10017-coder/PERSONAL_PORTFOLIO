@@ -1,0 +1,24 @@
+.scroll-float {
+  overflow: hidden;
+}
+
+.scroll-float-text {
+  display: inline-block;
+  font-size: clamp(1.6rem, 8vw, 10rem);
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.char {
+  display: inline-block;
+}
+
+/* Content-block variant: inherit typography from the surrounding element */
+.sf-content {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  letter-spacing: inherit;
+}

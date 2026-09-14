@@ -1,0 +1,30 @@
+.blinking-squares {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blinking-square {
+  position: absolute;
+  opacity: 0;
+  border-radius: 1px;
+  will-change: opacity;
+  animation-name: blink-square;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes blink-square {
+  0% { opacity: 0; }
+  3% { opacity: var(--blink-peak, 0.8); }
+  8% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blinking-square {
+    animation: none;
+    opacity: 0.1;
+  }
+}

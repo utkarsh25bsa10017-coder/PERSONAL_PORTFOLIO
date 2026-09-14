@@ -1,0 +1,107 @@
+.landscape {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Soft, mostly-transparent sky wash */
+.ls-sky {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 45% at 50% 80%, rgba(212, 175, 55, 0.07), transparent 70%),
+    linear-gradient(180deg, rgba(26, 5, 9, 0.10) 0%, rgba(61, 18, 32, 0.14) 45%, rgba(26, 5, 9, 0.45) 100%);
+}
+
+.ls-stars {
+  position: absolute;
+  inset: 0;
+}
+
+.ls-star {
+  position: absolute;
+  border-radius: 9999px;
+  background: #ffffff;
+  opacity: 0.06;
+  animation-name: ls-twinkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  will-change: opacity;
+}
+
+.ls-star-gold {
+  background: #f0d060;
+}
+
+@keyframes ls-twinkle {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.55; }
+}
+
+.ls-moon {
+  position: absolute;
+  top: 10%;
+  right: 12%;
+  width: 52px;
+  height: 52px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #ffe9c4, #d4af37 70%);
+  opacity: 0.55;
+  box-shadow: 0 0 24px 6px rgba(212, 175, 55, 0.18);
+  animation: ls-glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes ls-glow {
+  from { box-shadow: 0 0 18px 4px rgba(212, 175, 55, 0.12); }
+  to   { box-shadow: 0 0 36px 10px rgba(212, 175, 55, 0.24); }
+}
+
+.ls-mist {
+  position: absolute;
+  width: 42%;
+  height: 10%;
+  border-radius: 9999px;
+  background: rgba(212, 175, 55, 0.04);
+  filter: blur(28px);
+}
+
+.ls-mist-a { bottom: 34%; left: -10%; animation: ls-drift 46s linear infinite alternate; }
+.ls-mist-b { bottom: 22%; left: 55%; animation: ls-drift 62s linear infinite alternate-reverse; }
+
+@keyframes ls-drift {
+  from { transform: translateX(-6%); }
+  to   { transform: translateX(10%); }
+}
+
+.ls-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.ls-ridge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  animation-name: ls-pan;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes ls-pan {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ls-star { animation: none; opacity: 0.15; }
+  .ls-moon { animation: none; }
+  .ls-mist { animation: none; }
+  .ls-ridge { animation: none; }
+}
