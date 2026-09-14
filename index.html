@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="js/Landscape.css" />
     <link rel="stylesheet" href="js/WireframeBall.css" />
     <link rel="stylesheet" href="js/GhostCursor.css" />
+    <link rel="stylesheet" href="js/LightDroplets.css" />
   </head>
 
   <body class="bg-maroon-dark text-white font-body antialiased">
@@ -55,6 +56,7 @@
         <ul class="hidden md:flex gap-6 md:gap-10 text-sm md:text-base font-medium tracking-wide uppercase">
           <li><a href="#about" class="nav-link text-gray-300 hover:text-gold transition-colors">About</a></li>
           <li><a href="#skills" class="nav-link text-gray-300 hover:text-gold transition-colors">Skills</a></li>
+          <li><a href="#projects" class="nav-link text-gray-300 hover:text-gold transition-colors">Projects</a></li>
           <li><a href="#qualification" class="nav-link text-gray-300 hover:text-gold transition-colors">Qualification</a></li>
           <li><a href="#hobbies" class="nav-link text-gray-300 hover:text-gold transition-colors">Hobbies</a></li>
           <li><a href="#contact" class="nav-link text-gray-300 hover:text-gold transition-colors">Contact</a></li>
@@ -76,6 +78,7 @@
         <ul class="flex flex-col px-6 py-4 space-y-3 text-sm font-medium tracking-wide uppercase">
           <li><a href="#about" class="nav-link block text-gray-300 hover:text-gold transition-colors py-2">About</a></li>
           <li><a href="#skills" class="nav-link block text-gray-300 hover:text-gold transition-colors py-2">Skills</a></li>
+          <li><a href="#projects" class="nav-link block text-gray-300 hover:text-gold transition-colors py-2">Projects</a></li>
           <li><a href="#qualification" class="nav-link block text-gray-300 hover:text-gold transition-colors py-2">Qualification</a></li>
           <li><a href="#hobbies" class="nav-link block text-gray-300 hover:text-gold transition-colors py-2">Hobbies</a></li>
           <li><a href="#contact" class="nav-link block text-gray-300 hover:text-gold transition-colors py-2">Contact</a></li>
@@ -217,10 +220,31 @@
 
     <div class="section-divider max-w-4xl mx-auto"></div>
 
+    <!-- Projects -->
+    <section id="projects" class="py-24 px-6 relative overflow-hidden">
+
+      <!-- LightDroplets background (React Bits Pro) -->
+      <div class="absolute inset-0 z-0" aria-hidden="true" data-lightdroplets='{"count":24,"speed":70,"glow":16,"tilt":24,"spin":10}'></div>
+      <div class="absolute inset-0 z-0 bg-gradient-to-b from-maroon-dark/60 via-maroon-dark/20 to-maroon-dark/60 pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto relative z-10">
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">03</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white" data-foldtext='{"splitBy":"char","hinge":"top","trigger":"scroll","duration":0.65,"stagger":0.045,"ease":"power3.out","perspective":700,"creaseShading":0.55,"fontSize":"inherit","fontWeight":"inherit","color":"currentColor"}'>
+          Projects
+        </h2>
+        <p class="text-gray-500 text-center mb-14 tracking-widest uppercase text-sm">Things I've Built</p>
+
+        <!-- Carousel slides are rendered from js/projects.js (PROJECTS array) -->
+        <div id="projects-carousel"></div>
+      </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
     <!-- Qualification -->
     <section id="qualification" class="py-24 px-6 bg-maroon/50">
       <div class="max-w-5xl mx-auto">
-        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">03</p>
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">04</p>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white" data-foldtext='{"splitBy":"char","hinge":"top","trigger":"scroll","duration":0.65,"stagger":0.045,"ease":"power3.out","perspective":700,"creaseShading":0.55,"fontSize":"inherit","fontWeight":"inherit","color":"currentColor"}'>
           Qualification
         </h2>
@@ -247,10 +271,10 @@
 
       <!-- Landscape background (React Bits) -->
       <div class="absolute inset-0 z-0" aria-hidden="true" data-landscape></div>
-      <div class="absolute inset-0 z-0 bg-gradient-to-b from-maroon-dark/40 via-transparent to-maroon-dark/40 pointer-events-none"></div>
+      <div class="absolute inset-0 z-0 bg-gradient-to-b from-maroon-dark/20 via-transparent to-maroon-dark/20 pointer-events-none"></div>
 
       <div class="max-w-5xl mx-auto relative z-10">
-        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">04</p>
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">05</p>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white" data-foldtext='{"splitBy":"char","hinge":"top","trigger":"scroll","duration":0.65,"stagger":0.045,"ease":"power3.out","perspective":700,"creaseShading":0.55,"fontSize":"inherit","fontWeight":"inherit","color":"currentColor"}'>
           Hobbies
         </h2>
@@ -258,7 +282,7 @@
 
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Running Card -->
-          <div class="hobby-card bg-card rounded-sm p-8 border border-gray-700/50">
+          <div class="hobby-card bg-card/30 rounded-sm p-8 border border-gray-700/50">
             <div data-scrollfloat='{"as":"div","textClassName":"sf-content","animationDuration":1,"ease":"back.inOut(2)","scrollStart":"center bottom+=50%","scrollEnd":"bottom bottom-=40%","stagger":0.03}'>
             <div class="flex items-center gap-3 mb-6">
               <div class="w-10 h-10 border border-gold/30 flex items-center justify-center rounded-sm">
@@ -287,7 +311,7 @@
           </div>
 
           <!-- Drones & Aerospace Card -->
-          <div class="hobby-card bg-card rounded-sm p-8 border border-gray-700/50">
+          <div class="hobby-card bg-card/30 rounded-sm p-8 border border-gray-700/50">
             <div data-scrollfloat='{"as":"div","textClassName":"sf-content","animationDuration":1,"ease":"back.inOut(2)","scrollStart":"center bottom+=50%","scrollEnd":"bottom bottom-=40%","stagger":0.03}'>
             <div class="flex items-center gap-3 mb-6">
               <div class="w-10 h-10 border border-gold/30 flex items-center justify-center rounded-sm">
@@ -330,7 +354,7 @@
     <!-- Contact -->
     <section id="contact" class="py-24 px-6 bg-maroon/50">
       <div class="max-w-5xl mx-auto">
-        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">05</p>
+        <p class="font-display text-gold/60 text-xs tracking-[0.4em] uppercase text-center mb-3">06</p>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-white" data-foldtext='{"splitBy":"char","hinge":"top","trigger":"scroll","duration":0.65,"stagger":0.045,"ease":"power3.out","perspective":700,"creaseShading":0.55,"fontSize":"inherit","fontWeight":"inherit","color":"currentColor"}'>
           Contact Me
         </h2>
@@ -517,9 +541,11 @@
   <script type="text/babel" data-presets="react" src="js/RippleDistortion.jsx"></script>
   <script type="text/babel" data-presets="react" src="js/BlinkingSquares.jsx"></script>
   <script type="text/babel" data-presets="react" src="js/Landscape.jsx"></script>
+  <script type="text/babel" data-presets="react" src="js/LightDroplets.jsx"></script>
   <script type="text/babel" data-presets="react" src="js/WireframeBall.jsx"></script>
   <script type="text/babel" data-presets="react" src="js/GhostCursor.jsx"></script>
   <script type="module" src="js/ghost-cursor-lib.js"></script>
+  <script src="js/projects.js"></script>
   <script type="text/babel" data-presets="react" src="js/app.jsx"></script>
   </body>
 </html>

@@ -47,6 +47,13 @@ if (window.BlinkingSquares) {
   });
 }
 
+if (window.LightDroplets) {
+  document.querySelectorAll('[data-lightdroplets]').forEach((el) => {
+    const props = parseProps(el, 'lightdroplets');
+    createRoot(el).render(<LightDroplets {...props} />);
+  });
+}
+
 if (window.Landscape) {
   document.querySelectorAll('[data-landscape]').forEach((el) => {
     const props = parseProps(el, 'landscape');
