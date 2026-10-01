@@ -34,6 +34,26 @@
       ],
       repo: 'https://github.com/utkarsh25bsa10017-coder/Chat-with-your-PDF-RAG',
     },
+    {
+      title: 'ESP32 Weather Station',
+      subtitle: 'IoT Cloud Project',
+      description:
+        'A complete IoT weather monitoring system using ESP32 microcontroller with BME280 sensor. Reads temperature and humidity, sends data to AWS IoT Core, processes with Lambda ML prediction model for 10-hour forecast, stores in DynamoDB, and displays on a beautiful React dashboard with animated clouds and sun. Features real-time data updates every 5 seconds.',
+      tags: [
+        'ESP32',
+        'AWS IoT Core',
+        'AWS Lambda',
+        'DynamoDB',
+        'API Gateway',
+        'React',
+        'Tailwind CSS',
+        'MQTT',
+        'Python',
+      ],
+      repo: 'https://github.com/utkarsh25bsa10017-coder/GROUPPROJECT',
+      link: 'https://utkarsh25bsa10017-coder.github.io/GROUPPROJECT/dashboard/',
+      linkLabel: 'Live Dashboard',
+    },
     // ➕ Add your next project here — copy the object above and edit it.
   ];
 
