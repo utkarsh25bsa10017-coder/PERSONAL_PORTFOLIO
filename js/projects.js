@@ -51,8 +51,6 @@
         'Python',
       ],
       repo: 'https://github.com/utkarsh25bsa10017-coder/GROUPPROJECT',
-      link: 'https://utkarsh25bsa10017-coder.github.io/GROUPPROJECT/dashboard/',
-      linkLabel: 'Live Dashboard',
     },
     // ➕ Add your next project here — copy the object above and edit it.
   ];
