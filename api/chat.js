@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
   let body;
   try {
-    body = JSON.parse(req.body || '{}');
+    body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
   } catch {
     res.status(400).json({ error: 'Invalid JSON body' });
     return;
