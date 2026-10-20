@@ -47,8 +47,10 @@
 
 .yutea-hint {
   position: fixed;
-  top: 108px;
-  right: 110px;
+  top: 104px;
+  right: 114px;
+  left: auto;
+  bottom: auto;
   z-index: 100;
   display: flex;
   align-items: center;
