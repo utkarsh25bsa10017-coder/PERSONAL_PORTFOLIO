@@ -1,4 +1,16 @@
 @import url('https://fonts.cdnfonts.com/css/algerian');
+
+.cursor-blink {
+  display: inline-block;
+  animation: cursor-blink 1s steps(2, start) infinite;
+}
+
+@keyframes cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 html {
