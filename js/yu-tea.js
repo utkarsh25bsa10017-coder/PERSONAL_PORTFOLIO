@@ -207,6 +207,28 @@
   fab.addEventListener('click', toggle);
   closeBtn.addEventListener('click', toggle);
 
+  /* --- fade away into a blur outside hero/contact sections --- */
+  const hint = widget.querySelector('.yutea-hint');
+  const els = [fab, hint];
+  const state = { hero: false, contact: false };
+  const applyVisibility = () => {
+    const visible = state.hero || state.contact;
+    els.forEach((el) => el.classList.toggle('yutea-blur', !visible));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.target.id === 'hero') state.hero = e.isIntersecting;
+      if (e.target.id === 'contact') state.contact = e.isIntersecting;
+    });
+    applyVisibility();
+  }, { rootMargin: '60px 0px' });
+
+  const heroEl = document.getElementById('hero');
+  const contactEl = document.getElementById('contact');
+  if (heroEl) io.observe(heroEl);
+  if (contactEl) io.observe(contactEl);
+
   addMsg('bot', 'Hi! I\'m YU_TEA ☕ — I know everything about Utkarsh: his studies, projects, drones, and running records. What do you want to know?');
   setBusy(false);
 

@@ -286,6 +286,14 @@
 @keyframes yutea-bounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-4px); opacity: 1; } }
 @keyframes yutea-pulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.6); opacity: 0; } }
 
+.yutea-blur {
+  opacity: 0 !important;
+  filter: blur(16px);
+  transform: scale(0.92);
+  pointer-events: none;
+  transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease;
+}
+
 @media (max-width: 480px) {
   .yutea-window { top: 170px; right: 12px; height: 62vh; }
   .yutea-fab { top: 76px; right: 24px; width: 52px; height: 52px; }
