@@ -127,23 +127,33 @@
     });
 
     const apiKey = getKey();
-    if (!apiKey) {
+
+    // Prefer the Vercel serverless proxy (key stays server-side).
+    let res = null;
+    try {
+      res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({ messages: history }),
+      });
+      if (res.status === 404) res = null; // not deployed on this host (GitHub Pages) -> offline mode
+      else if (!res.ok) {
+        const txt = await res.text();
+        throw new Error('API error ' + res.status + ': ' + txt.slice(0, 200));
+      }
+    } catch (netErr) {
+      // Network failure on /api (e.g. GitHub Pages) -> fall through to offline mode
+      res = null;
+    }
+
+    if (!res) {
       await new Promise(r => setTimeout(r, 1600));
       return offlineAnswer(question);
     }
 
-    const res = await fetch(PROVIDER_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + apiKey,
-      },
-      body: JSON.stringify({ model: MODEL, messages: history }),
-    });
-    if (!res.ok) {
-      const txt = await res.text();
-      throw new Error('API error ' + res.status + ': ' + txt.slice(0, 200));
-    }
     const data = await res.json();
     return data.choices[0].message.content;
   }
@@ -174,10 +184,7 @@
 
   /* --- typing hint text --- */
   const hintText = widget.querySelector('.yutea-hint-text');
-  const PHRASE = 'Ask YUTEA anything about Utkarsh'.split(' ');
-  const LINES = [];
-  for (let i = 0; i < PHRASE.length; i += 3) LINES.push(PHRASE.slice(i, i + 3).join(' '));
-  const FULL = LINES.join('\n');
+  const FULL = 'Ask YUTEA anything about Utkarsh';
   let typing = true, ci = 0;
   function typeLoop() {
     if (!hintText) return;
