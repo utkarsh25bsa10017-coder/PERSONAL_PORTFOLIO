@@ -47,23 +47,21 @@
 
 .yutea-hint {
   position: fixed;
-  top: 156px;
-  right: 70px;
-  transform: translateX(50%);
-  transform-origin: center top;
+  top: 108px;
+  right: 110px;
   z-index: 100;
   display: flex;
   align-items: center;
   font-family: 'Orbitron', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.14em;
+  font-size: 10px;
+  letter-spacing: 0.12em;
   color: #d4af37;
   text-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
   pointer-events: none;
-  text-align: center;
-  white-space: pre-line;
-  line-height: 1.6;
-  animation: yutea-hint-in 0.6s ease-out both;
+  text-align: right;
+  white-space: nowrap;
+  transform: none;
+  animation: none;
 }
 @keyframes yutea-hint-in {
   from { opacity: 0; transform: translateX(50%) scaleX(0.2); }
@@ -290,5 +288,5 @@
   .yutea-window { top: 170px; right: 12px; height: 62vh; }
   .yutea-fab { top: 76px; right: 24px; width: 52px; height: 52px; }
   .yutea-fab img { width: 32px; height: 32px; }
-  .yutea-hint { top: 138px; right: 26px; font-size: 9px; letter-spacing: 0.1em; }
+  .yutea-hint { top: 92px; right: 90px; font-size: 8px; letter-spacing: 0.08em; }
 }
