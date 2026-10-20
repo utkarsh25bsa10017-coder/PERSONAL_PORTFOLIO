@@ -1,0 +1,294 @@
+/* YU_TEA — glass AI chat widget */
+.yutea-fab {
+  position: fixed;
+  top: 86px;
+  right: 40px;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: linear-gradient(150deg, rgba(61, 18, 32, 0.85), rgba(26, 5, 9, 0.9));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  line-height: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.yutea-fab:hover { transform: translateY(3px) scale(1.05); box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
+.yutea-fab-glyph {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: #d4af37;
+  text-shadow: 0 0 14px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.35);
+}
+
+.yutea-head-glyph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+  background: radial-gradient(circle at 50% 40%, rgba(212, 175, 55, 0.2), transparent 70%);
+}
+
+.yutea-hint {
+  position: fixed;
+  top: 156px;
+  right: 70px;
+  transform: translateX(50%);
+  transform-origin: center top;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #d4af37;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+  pointer-events: none;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.6;
+  animation: yutea-hint-in 0.6s ease-out both;
+}
+@keyframes yutea-hint-in {
+  from { opacity: 0; transform: translateX(50%) scaleX(0.2); }
+  to { opacity: 1; transform: translateX(50%) scaleX(1); }
+}
+.yutea-hint.fade { opacity: 0; transform: translateX(50%) scaleX(0.2); transition: opacity 0.3s ease, transform 0.3s ease; }
+
+.yutea-hint-cursor { margin-left: 3px; animation: yutea-hint-blink 1s steps(2, start) infinite; }
+@keyframes yutea-hint-blink { to { visibility: hidden; } }
+
+.yutea-window {
+  position: fixed;
+  top: 186px;
+  right: 22px;
+  z-index: 100;
+  width: 360px;
+  max-width: calc(100vw - 44px);
+  height: 520px;
+  max-height: calc(100vh - 190px);
+  display: none;
+  flex-direction: column;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: linear-gradient(160deg, rgba(61, 18, 32, 0.75), rgba(26, 5, 9, 0.88));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-12px) scale(0.98);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.yutea-window.open { display: flex; opacity: 1; transform: none; }
+
+.yutea-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(26, 5, 9, 0.5);
+}
+.yutea-head .avatar { position: relative; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(212, 175, 55, 0.5); overflow: hidden; flex-shrink: 0; }
+.yutea-head .avatar img { width: 100%; height: 100%; object-fit: contain; }
+.yutea-head .avatar .pulse {
+  position: absolute; inset: 0; border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  animation: yutea-pulse 2.4s ease-out infinite;
+}
+.yutea-head h3 { margin: 0; font-family: 'Orbitron', sans-serif; font-size: 13px; letter-spacing: 0.22em; color: #d4af37; }
+.yutea-head p { margin: 0; font-family: 'Rajdhani', sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(156, 163, 175, 0.8); }
+.yutea-status { margin-left: auto; display: flex; align-items: center; gap: 6px; font-size: 10px; color: rgba(156, 163, 175, 0.9); font-family: 'Rajdhani', sans-serif; }
+.yutea-status .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 8px #4ade80; }
+.yutea-status .dot.busy { background: #d4af37; box-shadow: 0 0 8px #d4af37; animation: yutea-pulse 1s ease-out infinite; }
+.yutea-close { background: none; border: 0; color: rgba(212, 175, 55, 0.7); cursor: pointer; padding: 6px; }
+.yutea-close:hover { color: #d4af37; }
+
+.yutea-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.35) transparent;
+}
+.yutea-body::-webkit-scrollbar { width: 5px; }
+.yutea-body::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.35); border-radius: 3px; }
+
+.yutea-msg {
+  max-width: 84%;
+  padding: 9px 13px;
+  border-radius: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.yutea-msg.user {
+  align-self: flex-end;
+  background: linear-gradient(140deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.08));
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #fff;
+  border-bottom-right-radius: 3px;
+}
+.yutea-msg.bot {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e5e7eb;
+  border-bottom-left-radius: 3px;
+}
+
+/* Thinking interface */
+.yutea-thinking {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 84%;
+  padding: 10px 13px;
+  border-radius: 10px;
+  border-bottom-left-radius: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+.yutea-thinking .steps { display: flex; flex-direction: column; gap: 4px; }
+.yutea-thinking .step {
+  display: flex; align-items: center; gap: 7px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(156, 163, 175, 0.6);
+  transition: color 0.3s ease;
+}
+.yutea-thinking .step.active { color: #d4af37; }
+.yutea-thinking .step.done { color: rgba(74, 222, 128, 0.8); }
+.yutea-thinking .spinner {
+  width: 10px; height: 10px; flex-shrink: 0;
+  border: 1.5px solid rgba(212, 175, 55, 0.25);
+  border-top-color: #d4af37;
+  border-radius: 50%;
+  animation: yutea-spin 0.7s linear infinite;
+}
+.yutea-thinking .dots { display: flex; gap: 4px; padding-top: 2px; }
+.yutea-thinking .dots span {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: rgba(212, 175, 55, 0.6);
+  animation: yutea-bounce 1.2s ease-in-out infinite;
+}
+.yutea-thinking .dots span:nth-child(2) { animation-delay: 0.15s; }
+.yutea-thinking .dots span:nth-child(3) { animation-delay: 0.3s; }
+
+.yutea-foot {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(26, 5, 9, 0.45);
+}
+.yutea-foot input {
+  flex: 1;
+  background: rgba(26, 5, 9, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.yutea-foot input:focus {
+  border-color: rgba(212, 175, 55, 0.55);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+.yutea-foot input::placeholder { color: rgba(156, 163, 175, 0.55); }
+.yutea-foot button {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.12);
+  color: #d4af37;
+  border-radius: 10px;
+  width: 42px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.25s ease;
+}
+.yutea-foot button:hover { background: rgba(212, 175, 55, 0.22); }
+.yutea-foot button:disabled { opacity: 0.4; cursor: default; }
+
+.yutea-gear {
+  position: absolute;
+  top: 12px;
+  right: 44px;
+}
+
+.yutea-notice {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 11px;
+  color: rgba(156, 163, 175, 0.7);
+  padding: 6px 16px 10px;
+  background: rgba(26, 5, 9, 0.45);
+}
+.yutea-notice a { color: #d4af37; text-decoration: none; }
+.yutea-notice a:hover { text-decoration: underline; }
+
+.yutea-keyrow {
+  display: none;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(26, 5, 9, 0.65);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+.yutea-keyrow.show { display: flex; }
+.yutea-keyrow input {
+  flex: 1;
+  background: rgba(26, 5, 9, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 8px;
+  padding: 7px 10px;
+  color: #fff;
+  font-size: 12px;
+  font-family: monospace;
+  outline: none;
+}
+.yutea-keyrow button {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: rgba(212, 175, 55, 0.12);
+  color: #d4af37;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+@keyframes yutea-spin { to { transform: rotate(360deg); } }
+@keyframes yutea-bounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-4px); opacity: 1; } }
+@keyframes yutea-pulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.6); opacity: 0; } }
+
+@media (max-width: 480px) {
+  .yutea-window { top: 170px; right: 12px; height: 62vh; }
+  .yutea-fab { top: 76px; right: 24px; width: 52px; height: 52px; }
+  .yutea-fab img { width: 32px; height: 32px; }
+  .yutea-hint { top: 138px; right: 26px; font-size: 9px; letter-spacing: 0.1em; }
+}

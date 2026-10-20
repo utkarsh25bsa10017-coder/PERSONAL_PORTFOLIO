@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.1",
+  "document_type": "yu_tea_knowledge_base",
+  "purpose": "YU_TEA answers visitor questions about Utkarsh using these knowledge bases as context.",
+  "personal_knowledge_base": {
+    "schema_version": "1.0",
+    "document_type": "personal_knowledge_base",
+    "profile": {
+      "preferred_name": "Utkarsh",
+      "full_name_seen_in_context": "Utkarsh Gupta",
+      "country_context": "India",
+      "education": {
+        "institution": "VIT Bhopal University",
+        "program": "B.Tech / Computer Science with a Cloud Computing focus",
+        "campus_context": "VIT Bhopal, Ashta/Sehore campus",
+        "academic_stage_context": "University student; first-year context was mentioned previously, with Fall Semester 2026–27 coursework also discussed",
+        "past_academics": {
+          "class_12_percentage_reported": 72,
+          "maths_score_reported": 55,
+          "notes": "These are user-reported historical scores, not independently verified."
+        }
+      },
+      "personal_details_shared": {
+        "age_last_reported": 19,
+        "height_last_reported_cm": 175,
+        "weight_last_reported_kg": 82,
+        "activity_context": "Has described walking about 4 km daily, sometimes 8 km on three days a week, and being sedentary for much of the remaining day.",
+        "privacy_note": "Age, height, weight, health, and medical-history fields are personal and may be removed before sharing this file with third-party tools."
+      }
+    },
+    "skills_and_technical_areas": {
+      "automation_and_ai_workflows": {
+        "top_skill": true,
+        "headline": "AI automation engineering with n8n + LLM APIs — focused on WhatsApp automation for e-commerce",
+        "what_he_builds": [
+          "n8n automation workflows as the primary practical skill",
+          "WhatsApp automation for e-commerce stores: automated customer alerts (order confirmations, shipping and delivery updates, COD confirmation, cart-abandonment and follow-up messages)",
+          "AI workflows pairing LLM APIs with n8n to generate and personalize message content",
+          "Integration across e-commerce stacks (Shopify-style stores, payment events like Razorpay, webhook-triggered flows)",
+          "Chatbot and knowledge-base integrations (e.g. this very chatbot, YU_TEA)"
+        ],
+        "presentation_note": "Present this FIRST and prominently when asked about skills, strengths, or what Utkarsh does."
+      },
+      "programming_and_development": {
+        "languages_and_technologies_exposed_to": ["Python", "C", "C++", "Java", "SQL", "HTML", "CSS", "JavaScript", "Verilog HDL"],
+        "web_development": ["HTML/CSS/JavaScript", "Responsive web design", "Full-stack web development interest", "AI-assisted development", "Git and GitHub", "Vercel deployment"],
+        "databases": ["SQL", "PostgreSQL"],
+        "computer_science_topics_studied": [
+          "Data structures and algorithms", "Bubble sort", "Selection sort", "Insertion sort", "Merge sort", "Circular queues", "Circular linked lists", "Binary search trees", "Hashing and quadratic probing",
+          "Operating systems", "CPU scheduling", "Starvation and aging", "File-system allocation", "I/O systems, DMA, interrupts", "Access-matrix protection model", "Operating-system security and cryptography",
+          "Digital logic design", "Boolean algebra", "Karnaugh maps", "Combinational circuits", "Multiplexers and demultiplexers", "Encoders and decoders", "Adders and subtractors", "Flip-flops and counters",
+          "Computer architecture", "Discrete mathematics and logic", "Probability and statistics",
+          "Machine learning", "Naive Bayes", "K-nearest neighbours", "Apriori algorithm", "Ensemble learning and bagging", "PCA and feature selection", "Matrix operations"
+        ],
+        "verilog_hdl_topics_practiced": [
+          "Behavioral, dataflow, and structural modeling", "8:1 and 4:1 multiplexers", "Decoders", "Priority encoders", "T flip-flops and asynchronous resets", "Full adders built from half adders", "Binary-to-Gray conversion", "Synchronous down-counters", "Even-parity generation", "Testbench writing", "Syntax-error correction"
+        ],
+        "skill_level_note": "These areas have been discussed, studied, or practiced. Do not represent every listed technology as professional-level mastery."
+      },
+      "cloud_and_ai": {
+        "areas_of_interest": ["Cloud computing (AWS)", "AI and data science", "Full-stack web development", "Data analytics", "SaaS product development"],
+        "status_note": "Areas of active learning and interest, plus completed certifications noted elsewhere."
+      },
+      "electronics_iot_and_uav": {
+        "summary": "FPV drone building as a hobby: a 5-inch build (SpeedyBee F405 V5, DJI O4 systems, ExpressLRS), plus general interest in Arduino/ESP32, Pixhawk, Raspberry Pi, and drone telemetry.",
+        "note": "Configs change; verify current build before wiring advice."
+      },
+      "business_and_marketing": {
+        "experience_and_interests": [
+          "Dropshipping", "E-commerce operations", "Product research", "Digital marketing", "Meta ads testing", "Product descriptions", "UGC advertising scripts", "Shopify store setup", "Checkout and cash-on-delivery configuration", "Payment gateway troubleshooting", "Customer experience", "SaaS business models", "Entrepreneurship"
+        ],
+        "reported_results": "Has reported ₹50,000 revenue and ₹13,000 profit from Brubkart dropshipping operations.",
+        "skills": ["Meta ads (campaign testing, scaling)", "Dropshipping", "Product research"],
+        "shopify_store": {
+          "brand_name": "Brubkart",
+          "positioning": "Home and living essentials",
+          "slogan": "a lifestyle worth living",
+          "categories_discussed": ["Toys and accessories", "Quirky home essentials", "Kitchen accessories", "Car accessories"],
+          "platforms_and_services_discussed": ["Shopify", "Roposo Clout", "Razorpay"],
+          "status_note": "A planned/launched store was discussed; ask for current operating status before assuming it is active."
+        },
+        "other_business_ideas": ["Building a Shopify alternative for the Indian market", "Finding a low-competition, high-demand SaaS niche", "Launching a gym-clothing brand", "Selling digital products"],
+        "budget_contexts_mentioned": [
+          "₹20,000 initial budget idea for a Shopify-related product, with ₹5,000 for building and ₹15,000 for Meta ads",
+          "₹36,000 ad-testing budget discussed for product testing",
+          "₹1 lakh budget discussed for starting a gym-clothing brand"
+        ],
+        "note": "These are historical planning figures, not necessarily current available funds or final decisions."
+      },
+      "design_media_and_portfolio": {
+        "interests": ["Video editing", "4K video editing", "Portfolio websites", "Logo and brand design", "LinkedIn content", "Certificate presentation", "Commercial and UGC video concepts"],
+        "portfolio": {
+          "platform": "Vercel",
+          "themes": ["Cloud computing", "AI and data science", "IoT and UAV systems", "Web development", "Projects", "Certifications"]
+        },
+        "certificate_context": ["Web Development with AI certificate", "Introduction to Data Science certificate"]
+      }
+    },
+    "projects_and_project_ideas": [
+      { "name": "CloudCast", "description": "Real-time microclimate monitoring via an edge-to-cloud architecture.", "context": "A university group-project topic discussed for Project Exhibition-1.", "related_areas": ["Cloud computing", "IoT", "Environmental monitoring", "Edge computing", "Data collection and visualization"], "status": "Project topic discussed; current implementation and approval status should be confirmed." },
+      { "name": "FPV drone companion computer / flight-support system", "description": "Concept involving a Raspberry Pi or companion computer, telemetry, GPS, IMU, video, and autopilot integration.", "related_technologies": ["Raspberry Pi", "Navio2", "ArduPilot", "PX4", "DroneKit-Python", "MAVROS"], "status": "Explored as a project idea; do not assume completed." },
+      { "name": "Custom analog FPV diversity video receiver", "description": "Analog VRX with receiver diversity/video fusion, RX5808 modules, video decoding, Raspberry Pi processing, OSD integration, and AV output.", "related_technologies": ["RX5808", "TVP5150", "Raspberry Pi", "PCB/Gerber design"], "status": "Design/build interest; confirm implementation stage." },
+      { "name": "Personal AI chat interface with a repository knowledge base", "description": "An AI chat interface that knows the user's background and can be updated through a repository-based knowledge file.", "status": "Desired capability / project idea." },
+      { "name": "Shopify alternative / commerce SaaS", "description": "A complete commerce platform alternative with a realistic MVP, competition analysis, costs, and customer-acquisition strategy focused on India.", "status": "Business concept under exploration." },
+      { "name": "ESP32 Weather Station → AWS IoT → Timestream/DynamoDB → Dashboard", "description": "AWS-connected weather station; see the project knowledge base below for full architecture.", "status": "Documented in project_knowledge_base; deployment state not verified." }
+    ],
+    "education_and_current_study_context": {
+      "institution": "VIT Bhopal University",
+      "semester_context": "Fall Semester 2026–27 has been mentioned.",
+      "course_codes_and_topics_discussed": [
+        { "code": "CSD3009", "topic": "Data Structures and Analysis of Algorithms" },
+        { "code": "DSN3009", "topic": "Data-structure lab work, including circular linked lists" },
+        { "code": "DSN2098", "topic": "Project Exhibition-1: project work area, title identification, supervisor allotment, and review process" }
+      ],
+      "academic_workflows": ["Preparing for CAT exams and term-end exams", "Solving practice questions step by step", "Writing C programs with inline comments", "Preparing handwritten-style notes", "Understanding university passing criteria", "Drafting formal emails to coordinators", "Preparing project approval and review documentation"],
+      "digital_logic_design_syllabus_to_reuse": [
+        "Number systems: binary, octal, decimal, and hexadecimal conversions",
+        "Boolean algebra: theorems, canonical forms, logic gates, and logic families including RTL, TTL, ECL, and CML",
+        "Gate-level minimization: SOP, POS, Karnaugh maps, and don't-care conditions",
+        "Combinational logic: multiplexers, demultiplexers, code converters, encoders, decoders, parity checkers and generators",
+        "Arithmetic circuits: adders, subtractors, BCD adders, and multipliers"
+      ]
+    },
+    "career_goals_and_interests": [
+      "Build practical skills in cloud computing", "Develop AI/data-science capabilities", "Build full-stack web applications", "Explore SaaS entrepreneurship", "Build IoT and UAV/drone systems", "Learn cybersecurity and Linux, including Kali Linux", "Explore robotics and related university clubs", "Earn money through digital products or software businesses", "Improve technical portfolio and professional profile"
+    ],
+    "hobbies_and_nontechnical_interests": [
+      "Endurance running (20 km in 2h09, 10 km in 55 min)", "FPV drones", "Electronics and hardware projects", "Video editing", "Trekking and adventure travel", "Everest Base Camp", "Annapurna Base Camp", "Sikkim treks", "Friendship Peak", "Kalimpong and Darjeeling"
+    ],
+    "learning_preferences": {
+      "preferred_explanation_style": [
+        "Simple, direct explanations", "Step-by-step teaching", "Explain code line by line when requested", "Use inline comments in code", "Proceed one question or concept at a time when the user says 'next'", "Focus on the exact questions the user supplied rather than adding unrelated questions", "For exam preparation, include definitions, worked examples, and exam-ready structure", "For theory questions, adapt depth to the requested marks, such as a 12-mark answer"
+      ],
+      "coding_help_preferences": [
+        "Include necessary imports in Python examples", "Use clear variable names", "Explain why the approach works", "Provide testbenches for Verilog when relevant", "Keep code appropriate for the user's current learning stage", "Point out common syntax mistakes and debugging steps"
+      ],
+      "decision_support_preferences": [
+        "Wants realistic budgets and cost breakdowns for business plans", "Values competition analysis and customer-acquisition strategy", "Wants practical recommendations rather than vague encouragement", "Often compares products and technical configurations before deciding"
+      ]
+    },
+    "hardware_and_purchase_research_context": {
+      "laptop_interests": ["Intel Core i7 H-series laptops", "Intel Core Ultra 5 and Ultra 7 comparisons", "Laptop budget discussions around ₹80,000 to ₹1 lakh", "Gaming and GPU-performance comparisons", "RTX 5050 versus RTX 5060"],
+      "other_hardware": ["MacBook Air M5 with 16 GB RAM and gaming/virtualization compatibility questions", "VMware Fusion", "CrossOver", "FPV chargers including SkyRC B6AC and B6Neo", "LiPo batteries and charging"]
+    },
+    "tools_platforms_and_services_discussed": [
+      "VIT academic systems and course workflows", "Git", "GitHub", "Vercel", "Shopify", "Roposo Clout", "Razorpay", "Meta Ads", "AWS", "Arduino IDE", "Betaflight Configurator", "INAV", "Linux", "Kali Linux", "VMware Fusion", "CrossOver", "Command Code", "OpenRouter"
+    ],
+    "assistant_guidance": {
+      "how_to_use_this_file": [
+        "Use this profile to tailor explanations and project advice.",
+        "Treat 'interests', 'ideas', and 'discussed' items as different from completed achievements.",
+        "Do not claim professional proficiency based only on a topic appearing in this file.",
+        "Ask for updates when details could have changed, including current semester, project status, hardware build, business status, budgets, and subscriptions.",
+        "Do not expose private health or personal details in public-facing writing unless the user explicitly asks."
+      ],
+      "last_context_refresh": "2026-10-21",
+      "accuracy_note": "Compiled from information the user shared in prior conversations. It may contain stale details and is not an independently verified CV."
+    }
+  },
+  "project_knowledge_base": {
+    "schema_version": "1.0",
+    "knowledge_base_type": "project",
+    "project": {
+      "name": "ESP32 Weather Station → AWS IoT → Timestream → Dashboard",
+      "alternate_context": "Cloud-connected weather monitoring and 10-hour forecasting",
+      "description": "ESP32 weather station publishes readings through AWS IoT Core MQTT/TLS; an IoT Rule invokes a prediction Lambda; readings/forecasts are stored in a backend database and served by a second Lambda through API Gateway to a browser dashboard.",
+      "implementation_status": "Not independently verified; documentation describes deployment instructions rather than proof of a successful live deployment."
+    },
+    "architecture": {
+      "common_flow": [
+        "ESP32 reads temperature/humidity", "Connects via 2.4 GHz phone hotspot or Wi-Fi", "Publishes JSON over MQTT/TLS to AWS IoT Core topic weather/data", "IoT Rule weather_to_lambda invokes prediction Lambda", "Prediction Lambda computes a 10-hour forecast and persists readings/forecasts", "API Gateway GET /weather invokes weather-api Lambda", "Dashboard fetches JSON and refreshes every 60 seconds"
+      ],
+      "storage_variants": {
+        "quick_setup": "DynamoDB table weather-readings with device_id (String) partition key and timestamp (String) sort key.",
+        "original_documentation": "Amazon Timestream database weatherdb, table readings, 12-hour memory retention."
+      },
+      "known_document_conflicts": [
+        "Document title and original deployment describe Timestream, but top diagram and REAL PROJECT SETUP describe DynamoDB.",
+        "Quick setup instructs DynamoDBFullAccess while prediction Lambda environment variables TS_DATABASE and TS_TABLE are Timestream-specific.",
+        "Lambda function names are case-sensitive (Weather-predict vs weather-predict).",
+        "API route depends on stage: /prod/weather vs /weather.",
+        "Firmware file table says DHT22 but hardware and wiring instructions specify BME280.",
+        "Original docs mention a touch switch and 1.8-inch ST7735 TFT; quick setup omits touch-switch wiring."
+      ]
+    },
+    "hardware": {
+      "controller": "ESP32 Dev Module",
+      "sensor": { "primary_instructions": "BME280", "conflicting_file_table": "DHT22", "bus": "I2C", "pins": { "VCC": "3V3", "GND": "GND", "SDA": "GPIO21", "SCL": "GPIO22" }, "possible_i2c_addresses": ["0x76", "0x77"] },
+      "display": { "type": "1.8-inch TFT ST7735", "bus": "SPI", "pins": { "VCC": "3V3", "GND": "GND", "MOSI": "GPIO23", "SCK": "GPIO18", "CS": "GPIO5", "DC": "GPIO2", "RST": "GPIO4" } },
+      "touch_switch": { "pins": { "VCC": "3V3", "GND": "GND", "SIG": "GPIO15" } },
+      "connectivity": "2.4 GHz Wi-Fi hotspot; 5 GHz-only hotspot is incompatible."
+    },
+    "firmware": {
+      "main_file": "esp32_weather.ino",
+      "secrets_template": "secrets.h.example",
+      "local_secrets_file": "secrets.h",
+      "serial_baud": 115200,
+      "libraries": ["PubSubClient", "ArduinoJson", "Adafruit BME280 Library", "Adafruit Unified Sensor", "Adafruit GFX Library", "TFT_eSPI"],
+      "thing_name": "esp32-weather-01",
+      "publish_interval_seconds": 60,
+      "mqtt_topic": "weather/data",
+      "example_payload": { "device_id": "esp32-weather-01", "timestamp": "<device timestamp>", "temperature": 31.4, "humidity": 68 },
+      "security_note": "Never commit secrets.h, private keys, or certificates."
+    },
+    "aws": {
+      "suggested_region": "ap-south-1",
+      "services": ["AWS IoT Core", "AWS Lambda", "Amazon API Gateway HTTP API", "Amazon Timestream (original workflow)", "Amazon DynamoDB (quick-setup variant)", "AWS IAM"],
+      "iot_rule": { "name": "weather_to_lambda", "sql": "SELECT * FROM 'weather/data'", "action": "Invoke prediction Lambda" },
+      "prediction_lambda": { "original_name": "weather-predict", "quick_setup_name": "Weather-predict", "runtime": "Python 3.12", "task": "Generate and persist forecasts" },
+      "api_lambda": { "name": "weather-api", "runtime": "Python 3.12", "task": "Read stored weather information and return JSON" },
+      "timestream": { "database": "weatherdb", "table": "readings", "memory_retention_hours": 12 },
+      "dynamodb_variant": { "table": "weather-readings", "partition_key": "device_id (String)", "sort_key": "timestamp (String)" },
+      "api": { "method": "GET", "route": "/weather", "stage_variants": ["prod stage → /prod/weather", "default stage → /weather"], "cors": "Enable CORS for dashboard origins" },
+      "security_notes": ["Prefer least-privilege IAM policies over broad AmazonDynamoDBFullAccess", "Never place private keys in the dashboard or public repository", "Review public API/CORS settings before production deployment"]
+    },
+    "forecast_model": {
+      "type": "Physics-based heuristic, no training data required",
+      "horizon_hours": 10,
+      "temperature": { "method": "Daily cosine/diurnal curve", "peak_hour_local_approx": 15, "minimum_hour_local_approx": 3, "default_amplitude_celsius": 4 },
+      "humidity": "Approximate inverse change of -2.5 percentage points RH per +1°C temperature",
+      "dew_point": "Magnus formula",
+      "rain_likelihood": "Heuristic based on high relative humidity and small temperature–dew-point spread",
+      "conditions": ["Clear", "Humid / Hazy", "Cloudy", "Rain likely"],
+      "tuning_parameters": ["amplitude", "PEAK_HOUR", "UTC offset +5.5 hours (IST)"],
+      "limitations": ["Heuristic projection, not a trained meteorological model", "Rain likelihood is not a calibrated probability", "Validate against observed data before accuracy claims."]
+    },
+    "troubleshooting": {
+      "wifi_stuck": "Use 2.4 GHz hotspot; check SSID/password",
+      "mqtt_rc_minus_2": "Check IoT endpoint and device certificate/private key",
+      "mqtt_drops": "Verify IoT policy client ID matches THING_NAME",
+      "bme280_missing": "Verify I2C wiring and address 0x76 or 0x77",
+      "tft_black": "Verify TFT_eSPI driver/setup and SPI GPIO mapping",
+      "tft_inverted_colors": "Check ST7735_RGB_ORDER vs ST7735_BGR",
+      "lambda_access_denied": "Check IAM policies and propagation; retry after delay",
+      "timestream_write_rejected": "Verify memory retention >= 12 hours",
+      "api_empty_array": "Publish a reading, check query window and storage pipeline",
+      "cors_error": "Verify HTTP API CORS and Lambda response headers"
+    },
+    "cost_notes": {
+      "document_estimate": "At one message per minute, roughly 43,000 MQTT messages/month and roughly 86,000 Lambda invocations/month.",
+      "caution": "Free-tier limits, Timestream and API Gateway charges change; check current AWS pricing."
+    },
+    "agent_instructions": [
+      "Use this JSON as the project source of truth for documented intent, not proof of deployed state.",
+      "Before modifying storage or deployment, ask whether the actual repository uses Timestream or DynamoDB.",
+      "Maintain ESP32 wiring assignments unless the user confirms hardware changes.",
+      "Do not hardcode Wi-Fi passwords, AWS access keys, certificates, or private keys in source control.",
+      "Preserve the MQTT topic weather/data and payload contract unless coordinating a migration.",
+      "Treat forecasts as heuristics; avoid unsupported accuracy claims."
+    ]
+  },
+  "health_and_private_context": "Omitted from the public chatbot on purpose. Keep this section in a local, non-published file if you want YU_TEA (or any other tool) to know it privately; never commit it to a public repository.",
+  "docuchat_knowledge_base": {
+    "schema_version": "1.0",
+    "knowledge_base_type": "project",
+    "project": {
+      "name": "DocuChat",
+      "description": "Next.js PDF chat application (RAG): upload PDFs, ask questions, and receive answers with citations retrieved via vector similarity search.",
+      "architecture": "Next.js 14 (Pages Router), React 18, Prisma, PostgreSQL with pgvector, NextAuth.js, OpenAI text-embedding-3-small (1536 dims), Anthropic Claude, Tailwind CSS."
+    },
+    "documented_data_flow": [
+      "User uploads a PDF.",
+      "Validate PDF type and the 5 MB max size on both client and server.",
+      "Store uploaded bytes in the database while processing is pending.",
+      "Parse PDF text asynchronously; handle corrupt or password-protected files gracefully.",
+      "Split text into semantically meaningful chunks with overlap and paragraph awareness.",
+      "Generate 1536-dim embeddings with OpenAI text-embedding-3-small.",
+      "Store embeddings in PostgreSQL via pgvector.",
+      "At question time, embed the query, run vector similarity search, retrieve relevant chunks.",
+      "Send question plus retrieved context to Anthropic Claude.",
+      "Return an answer with citations to source chunks and explicit truncation warnings."
+    ],
+    "setup_commands": {
+      "install": "npm install",
+      "database": "npx prisma db push",
+      "pgvector": "psql \"$DATABASE_URL\" -f sql/enable-pgvector.sql (enables vector extension, adds embedding vector(1536) column because Prisma cannot create Unsupported columns, creates similarity-search index)",
+      "dev": "npm run dev (http://localhost:3000)",
+      "production_build": "npm run build && npm start"
+    },
+    "project_structure": {
+      "components/": "React UI components",
+      "lib/": "Core logic: chunking, embeddings, vector search, Claude integration",
+      "pages/": "Next.js pages and API routes",
+      "prisma/": "Prisma schema",
+      "sql/": "PostgreSQL setup scripts",
+      "styles/": "Tailwind entry CSS"
+    },
+    "environment_variables": {
+      "DATABASE_URL": "PostgreSQL connection string (required)",
+      "NEXTAUTH_URL": "Application base URL",
+      "NEXTAUTH_SECRET": "NextAuth.js secret",
+      "ANTHROPIC_API_KEY": "Anthropic API credential",
+      "OPENAI_API_KEY": "OpenAI API credential"
+    },
+    "security_and_operational_notes": {
+      "credentials": ["Never hardcode API keys in source.", "Never commit .env.local or real credentials."],
+      "uploads": ["Keep client- and server-side validation.", "Enforce the 5 MB limit server-side.", "Handle corrupt and password-protected PDFs gracefully."],
+      "rate_limiting": ["Current in-memory limiter is not shared across instances.", "Use Redis-backed limiter (e.g. Upstash) for multi-instance deployments."],
+      "storage_scaling": ["Database bytea storage only until processing completes.", "For large scale, consider object storage such as S3 or Cloudflare R2."],
+      "authorization": ["Full document ownership model not documented — verify users can only access their own documents/chunks."],
+      "deployment_readiness": ["'Production-grade' is the documentation's claim; no code, tests, audit or benchmark were supplied.", "Verify migrations, error handling, observability, authorization, and provider failure behavior against the actual repository."]
+    },
+    "known_gaps_to_confirm_in_code": [
+      "PDF parser library", "Exact chunk size/overlap", "Embedding batching and retries", "Similarity metric and index type",
+      "top_k count and relevance threshold", "Exact Claude model version", "Citation format and source metadata",
+      "API route names and schemas", "Background job mechanism", "Document ownership/tenant isolation",
+      "Registration and password-reset behavior", "Rate-limit thresholds", "Test coverage", "Deployment provider"
+    ],
+    "ai_coding_agent_instructions": {
+      "working_rules": [
+        "Read the actual repository before changing code.",
+        "Preserve the Next.js 14 Pages Router architecture unless asked to migrate.",
+        "Keep the stack: React 18, Prisma, PostgreSQL+pgvector, NextAuth, OpenAI embeddings, Anthropic Claude, Tailwind.",
+        "Keep embedding dimension consistent at 1536 (text-embedding-3-small, vector(1536)).",
+        "Maintain client- and server-side PDF validation with a 5 MB maximum.",
+        "Preserve async PDF processing and clear errors for corrupt/password-protected PDFs.",
+        "Use paragraph-aware chunking with overlap; do not invent numeric chunk settings without checking the code.",
+        "Ground RAG answers in retrieved passages with citations; surface truncation warnings.",
+        "Rate-limit upload/process/chat endpoints.",
+        "Never expose API keys or secrets in client bundles, logs, or commits.",
+        "Do not assume in-memory rate limiting is adequate for multiple instances.",
+        "Do not assume document-level authorization exists until verified.",
+        "Run tests and build checks after changes, and report what was actually run."
+      ],
+      "response_style": ["Practical steps", "File paths and complete code on request", "Explain setup commands and env vars", "Call out security implications", "Never claim untested code is tested."]
+    }
+  },
+  "assistant_guidance": {
+    "style": "Friendly, concise (3–5 sentences), always in character as YU_TEA, Utkarsh's AI avatar.",
+    "topic_balance": "IMPORTANT: Answer exactly the topic asked. Do not steer answers toward FPV drones, Uav, or the ESP32 project unless the question is about them. Drones are just one hobby; lead with what best matches the question (cloud/CT/web/dev/business/studies/running etc.).",
+    "answer_from": "personal_knowledge_base and project_knowledge_base only.",
+    "when_unknown": "Say the information is not in the knowledge base yet."
+  },
+  "last_context_refresh": "2026-10-21"
+}

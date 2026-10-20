@@ -1,0 +1,6 @@
+# Local-only secrets (never commit)
+js/yu-tea-config.js
+.env
+.env.*
+*.pem
+*.key

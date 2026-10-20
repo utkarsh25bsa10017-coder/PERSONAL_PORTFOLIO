@@ -5,6 +5,29 @@
   animation: cursor-blink 1s steps(2, start) infinite;
 }
 
+/* Split reveal — masked word rise for the hero heading */
+.sr-line { display: block; overflow: hidden; }
+.sr-word {
+  display: inline-block;
+  transform: translateY(115%);
+  opacity: 0;
+  animation: sr-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.sr-line > span.sr-mask { display: block; overflow: hidden; padding-bottom: 0.08em; }
+.sr-w-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.sr-btn-wrap { display: inline-flex; }
+.split-reveal { min-height: 1.2em; }
+
+@keyframes sr-rise {
+  to { transform: translateY(0); opacity: 1; }
+}
+
 @keyframes cursor-blink {
   to {
     visibility: hidden;
@@ -60,6 +83,46 @@ body {
   border: 1px solid rgba(212, 175, 55, 0.15);
   background: linear-gradient(145deg, rgba(42, 42, 42, 0.6), rgba(26, 5, 9, 0.4));
 }
+
+/* Glass contact form */
+.form-glass {
+  position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.07), rgba(61, 18, 32, 0.25) 60%,
+    rgba(26, 5, 9, 0.55));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.form-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
+}
+
+.form-glass .form-field {
+  background: rgba(26, 5, 9, 0.45);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.form-glass .form-field:focus {
+  border-color: rgba(212, 175, 55, 0.6);
+  background: rgba(26, 5, 9, 0.6);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12), 0 8px 24px rgba(212, 175, 55, 0.08);
+}
+
+.form-glass .form-field::placeholder {
+  color: rgba(156, 163, 175, 0.55);
+}
+
 
 .hobby-card,
 .contact-card,
