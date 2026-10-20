@@ -6,7 +6,7 @@
 (() => {
   const PROVIDER_URL = 'https://openrouter.ai/api/v1/chat/completions';
   // Optional local override: js/yu-tea-config.js (gitignored) defines window.YUTEA_API_KEY / YUTEA_MODEL.
-  const MODEL = window.YUTEA_MODEL || 'meta-llama/llama-3.3-70b-instruct:free';
+  const MODEL = window.YUTEA_MODEL || 'minimax/minimax-m3.1-flash:free';
   const AVATAR = 'assets/yu-tea.png';
   const DEFAULT_API_KEY = window.YUTEA_API_KEY || '';
   let knowledge = null;
@@ -206,6 +206,14 @@
   };
   fab.addEventListener('click', toggle);
   closeBtn.addEventListener('click', toggle);
+
+  /* dismiss when clicking outside the window */
+  document.addEventListener('pointerdown', (e) => {
+    if (win.classList.contains('open') && !win.contains(e.target) && !fab.contains(e.target)) {
+      win.classList.remove('open');
+      hint.classList.add('fade');
+    }
+  });
 
   /* --- fade away into a blur outside hero/contact sections --- */
   const hint = widget.querySelector('.yutea-hint');

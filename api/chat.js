@@ -34,7 +34,7 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: process.env.YUTEA_MODEL || 'nvidia/nemotron-3.5-super-vl:free',
+        model: process.env.YUTEA_MODEL || 'minimax/minimax-m3.1-flash:free',
         messages,
       }),
     });
